@@ -2,10 +2,25 @@ import { motion } from 'framer-motion';
 import { type Photo } from '../data/photos';
 import PhotoCard from './PhotoCard';
 
+type PhotoLayout = 'feature' | 'wide' | 'standard' | 'portrait';
+
 type GalleryProps = {
   photos: Photo[];
   isLoading: boolean;
   onOpenPhoto: (photo: Photo) => void;
+};
+
+const getLayout = (index: number): PhotoLayout => {
+  const pattern: PhotoLayout[] = [
+    'feature',
+    'portrait',
+    'standard',
+    'wide',
+    'portrait',
+    'standard',
+  ];
+
+  return pattern[index % pattern.length];
 };
 
 function Gallery({ photos, isLoading, onOpenPhoto }: GalleryProps) {
@@ -30,7 +45,11 @@ function Gallery({ photos, isLoading, onOpenPhoto }: GalleryProps) {
     <section className="gallery" aria-label="Galerie photo">
       {isLoading
         ? Array.from({ length: 8 }).map((_, index) => (
-            <article key={`skeleton-${index}`} className="photo-card photo-card--skeleton">
+            <article
+              key={`skeleton-${index}`}
+              className={`photo-card photo-card--skeleton photo-card--${getLayout(index)}`}
+              style={{ gridRowEnd: `span ${12 + (index % 4) * 4}` }}
+            >
               <div className="photo-card__skeleton photo-card__skeleton--image" />
               <div className="photo-card__skeleton photo-card__skeleton--line" />
               <div className="photo-card__skeleton photo-card__skeleton--line short" />
@@ -42,6 +61,7 @@ function Gallery({ photos, isLoading, onOpenPhoto }: GalleryProps) {
               photo={photo}
               onClick={() => onOpenPhoto(photo)}
               index={index}
+              layout={getLayout(index)}
             />
           ))}
     </section>

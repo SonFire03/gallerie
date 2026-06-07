@@ -405,15 +405,18 @@ img {
 }
 
 .gallery {
-  column-count: 3;
-  column-gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 12px;
+  grid-auto-flow: dense;
+  gap: 18px;
 }
 
 .photo-card {
   width: 100%;
-  display: inline-grid;
+  display: grid;
+  grid-template-rows: auto auto;
   gap: 0;
-  margin: 0 0 18px;
   padding: 0;
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -434,9 +437,40 @@ img {
   box-shadow: 0 22px 46px rgba(0, 0, 0, 0.36);
 }
 
+.photo-card--feature {
+  grid-column: span 8;
+}
+
+.photo-card--wide {
+  grid-column: span 6;
+}
+
+.photo-card--standard {
+  grid-column: span 4;
+}
+
+.photo-card--portrait {
+  grid-column: span 3;
+}
+
+.photo-card--feature .photo-card__media {
+  aspect-ratio: 16 / 10;
+}
+
+.photo-card--wide .photo-card__media {
+  aspect-ratio: 5 / 4;
+}
+
+.photo-card--standard .photo-card__media {
+  aspect-ratio: 4 / 5;
+}
+
+.photo-card--portrait .photo-card__media {
+  aspect-ratio: 3 / 4;
+}
+
 .photo-card__media {
   position: relative;
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   background:
     linear-gradient(135deg, rgba(78, 232, 255, 0.12), rgba(255, 255, 255, 0.03)),
@@ -470,6 +504,14 @@ img {
   display: grid;
   gap: 14px;
   padding: 18px;
+}
+
+.photo-card--feature .photo-card__body {
+  padding: 22px;
+}
+
+.photo-card--feature .photo-card__headline h3 {
+  font-size: 1.22rem;
 }
 
 .photo-card__headline {
@@ -698,7 +740,17 @@ img {
   }
 
   .gallery {
-    column-count: 2;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .photo-card--feature,
+  .photo-card--wide {
+    grid-column: span 8;
+  }
+
+  .photo-card--standard,
+  .photo-card--portrait {
+    grid-column: span 4;
   }
 }
 
@@ -728,7 +780,15 @@ img {
   }
 
   .gallery {
-    column-count: 1;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .photo-card--feature,
+  .photo-card--wide,
+  .photo-card--standard,
+  .photo-card--portrait {
+    grid-column: span 6;
   }
 
   .lightbox__panel {
@@ -765,5 +825,16 @@ img {
   .photo-card__meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card--feature,
+  .photo-card--wide,
+  .photo-card--standard,
+  .photo-card--portrait {
+    grid-column: 1 / -1;
   }
 }
