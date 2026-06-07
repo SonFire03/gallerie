@@ -1,58 +1,22 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { type Photo } from '../data/photos';
 
-type PhotoLayout = 'feature' | 'wide' | 'standard' | 'portrait';
+type PhotoLayout = 'feature' | 'panorama' | 'wide' | 'standard' | 'portrait';
 
 type PhotoCardProps = {
   photo: Photo;
   onClick: () => void;
   index: number;
   layout: PhotoLayout;
+  rowSpan: number;
 };
 
-const ROW_HEIGHT = 12;
-const ROW_GAP = 18;
-
-function PhotoCard({ photo, onClick, index, layout }: PhotoCardProps) {
+function PhotoCard({ photo, onClick, index, layout, rowSpan }: PhotoCardProps) {
   const [loaded, setLoaded] = useState(false);
-  const [rowSpan, setRowSpan] = useState(1);
-  const cardRef = useRef<HTMLButtonElement | null>(null);
-
-  useEffect(() => {
-    const element = cardRef.current;
-    if (!element) {
-      return;
-    }
-
-    let frame = 0;
-
-    const updateSpan = () => {
-      cancelAnimationFrame(frame);
-      frame = window.requestAnimationFrame(() => {
-        const height = element.getBoundingClientRect().height;
-        const span = Math.max(
-          1,
-          Math.ceil((height + ROW_GAP) / (ROW_HEIGHT + ROW_GAP)),
-        );
-        setRowSpan(span);
-      });
-    };
-
-    updateSpan();
-
-    const observer = new ResizeObserver(updateSpan);
-    observer.observe(element);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      observer.disconnect();
-    };
-  }, [loaded]);
 
   return (
     <motion.button
-      ref={cardRef}
       type="button"
       className={`photo-card photo-card--${layout}`}
       onClick={onClick}
