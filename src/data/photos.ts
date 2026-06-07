@@ -122,4 +122,26 @@ export const photos: Photo[] = [
     image: asset('file_00000000c9e07246828593cf1cccd946.png'),
     tags: ['editorial', 'light', 'portrait'],
   },
+  {
+    id: 'canopy-view',
+    title: 'Canopy View',
+    category: 'Landscape',
+    location: 'Nature',
+    date: '2026-06-08',
+    description:
+      'Un cadre naturel construit par le feuillage, avec une scène ouverte sur l’eau et le ciel.',
+    image: asset('5300072b-ae9f-4e69-aff6-f3d30722438e.png'),
+    tags: ['trees', 'water', 'summer'],
+  },
+  {
+    id: 'abyssal-rise',
+    title: 'Abyssal Rise',
+    category: 'Conceptual',
+    location: 'Studio',
+    date: '2026-06-08',
+    description:
+      'Une image verticale et cinématographique, pensée comme une apparition suspendue dans la profondeur.',
+    image: asset('ee4b79f5-2879-423a-923e-9cbeb13a27e2.png'),
+    tags: ['underwater', 'blue', 'surreal'],
+  },
 ];
