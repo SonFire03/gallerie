@@ -36,7 +36,7 @@ function FilterBar({
       <div className="filters__topline">
         <div>
           <p className="eyebrow">Portfolio</p>
-          <h2>Choisis une catégorie, puis affine avec la recherche.</h2>
+          <h2>Portfolio</h2>
         </div>
         <p className="filters__count" aria-live="polite">
           {visibleCount} photo{visibleCount === 1 ? '' : 's'} affichée
