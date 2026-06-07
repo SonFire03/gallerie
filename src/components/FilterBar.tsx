@@ -35,8 +35,8 @@ function FilterBar({
     >
       <div className="filters__topline">
         <div>
-          <p className="eyebrow">Curated selection</p>
-          <h2>Filtrer les images par ambiance, lieu ou thème.</h2>
+          <p className="eyebrow">Portfolio</p>
+          <h2>Choisis une catégorie, puis affine avec la recherche.</h2>
         </div>
         <p className="filters__count" aria-live="polite">
           {visibleCount} photo{visibleCount === 1 ? '' : 's'} affichée
@@ -68,7 +68,7 @@ function FilterBar({
         </label>
       </div>
 
-      <div className="chips" role="tablist" aria-label="Catégories">
+      <div className="chips chips--portfolio" role="tablist" aria-label="Catégories">
         {categories.map((item) => (
           <button
             key={item}

@@ -296,6 +296,11 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.hero__stat--accent {
+  background: linear-gradient(135deg, rgba(0, 194, 255, 0.14), rgba(255, 255, 255, 0.03));
+  border-color: rgba(78, 232, 255, 0.22);
+}
+
 .hero__stat-label {
   color: var(--muted);
   font-size: 0.88rem;
@@ -380,6 +385,11 @@ img {
   gap: 10px;
 }
 
+.chips--portfolio {
+  padding-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 .chip {
   min-height: 40px;
   padding: 0 14px;
@@ -392,6 +402,36 @@ img {
     border-color 160ms ease,
     color 160ms ease,
     transform 160ms ease;
+}
+
+.chips--portfolio .chip {
+  border-radius: 0;
+  padding-inline: 0;
+  min-width: auto;
+  min-height: 36px;
+  background: transparent;
+  border-color: transparent;
+  position: relative;
+}
+
+.chips--portfolio .chip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: transparent;
+  transition: background 160ms ease, transform 160ms ease;
+  transform: scaleX(0.25);
+  transform-origin: center;
+}
+
+.chips--portfolio .chip:hover::after,
+.chips--portfolio .chip:focus-visible::after,
+.chips--portfolio .chip--active::after {
+  background: rgba(78, 232, 255, 0.7);
+  transform: scaleX(1);
 }
 
 .chip:hover {
@@ -435,6 +475,31 @@ img {
   transform: translateY(-3px);
   border-color: rgba(78, 232, 255, 0.28);
   box-shadow: 0 22px 46px rgba(0, 0, 0, 0.36);
+}
+
+.photo-card__media::before {
+  content: "View";
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 1;
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(4, 10, 18, 0.55);
+  color: var(--text);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.photo-card:hover .photo-card__media::before,
+.photo-card:focus-visible .photo-card__media::before {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .photo-card--feature {
@@ -543,6 +608,10 @@ img {
   font-size: 1.08rem;
 }
 
+.photo-card--feature .photo-card__headline h3 {
+  font-size: 1.18rem;
+}
+
 .photo-card__headline span,
 .photo-card__meta {
   color: var(--muted);
@@ -552,6 +621,7 @@ img {
 .photo-card__body p {
   margin: 0;
   font-size: 0.95rem;
+  max-width: 42ch;
 }
 
 .photo-card__meta {
@@ -795,6 +865,16 @@ img {
 
   .filters__grid {
     grid-template-columns: 1fr;
+  }
+
+  .chips--portfolio {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+  }
+
+  .chips--portfolio .chip {
+    white-space: nowrap;
   }
 
   .gallery {

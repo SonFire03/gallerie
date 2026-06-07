@@ -15,12 +15,11 @@ function Hero({ totalCount }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <p className="eyebrow">Portfolio photo premium</p>
-          <h1>Une galerie élégante, rapide et pensée comme un vrai portfolio.</h1>
+          <p className="eyebrow">Portfolio photo</p>
+          <h1>Une sélection d’images présentée avec une direction claire et sobre.</h1>
           <p className="hero__lead">
-            Une interface sombre et minimaliste pour présenter des images avec une
-            direction artistique nette, une navigation fluide et une expérience
-            responsive de niveau premium.
+            Une mise en page inspirée des portfolios photo éditoriaux, avec une
+            lecture simple, des catégories directes et des visuels au premier plan.
           </p>
 
           <div className="hero__actions">
@@ -39,17 +38,17 @@ function Hero({ totalCount }: HeroProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
         >
-          <div className="hero__stat">
+          <div className="hero__stat hero__stat--accent">
             <span className="hero__stat-label">Photos publiées</span>
             <strong>{totalCount}</strong>
           </div>
           <div className="hero__stat">
-            <span className="hero__stat-label">Style</span>
-            <strong>Dramatique et minimal</strong>
+            <span className="hero__stat-label">Approche</span>
+            <strong>Minimal, dense, image-first</strong>
           </div>
           <div className="hero__stat">
             <span className="hero__stat-label">Navigation</span>
-            <strong>Recherche, filtres, tri, lightbox</strong>
+            <strong>Catégories, recherche, tri, lightbox</strong>
           </div>
         </motion.aside>
       </div>
