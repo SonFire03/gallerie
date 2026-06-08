@@ -144,4 +144,15 @@ export const photos: Photo[] = [
     image: asset('ee4b79f5-2879-423a-923e-9cbeb13a27e2.png'),
     tags: ['underwater', 'blue', 'surreal'],
   },
+  {
+    id: 'crimson-veil',
+    title: 'Crimson Veil',
+    category: 'Conceptual',
+    location: 'Studio',
+    date: '2026-06-08',
+    description:
+      'Un portrait contrasté qui joue sur le masque, la lumière rouge et une atmosphère volontairement cinématographique.',
+    image: asset('crimson-veil.png'),
+    tags: ['portrait', 'red', 'cinematic'],
+  },
 ];
