@@ -13,31 +13,32 @@ type GalleryProps = {
 const getRowSpan = (layout: PhotoLayout) => {
   switch (layout) {
     case 'feature':
-      return 28;
+      return 22;
     case 'panorama':
-      return 24;
-    case 'wide':
       return 20;
-    case 'portrait':
+    case 'wide':
       return 18;
+    case 'portrait':
+      return 16;
     case 'standard':
     default:
-      return 19;
+      return 17;
   }
 };
 
 const getLayout = (index: number): PhotoLayout => {
   const pattern: PhotoLayout[] = [
     'feature',
-    'portrait',
-    'wide',
     'standard',
+    'wide',
+    'portrait',
     'panorama',
     'wide',
     'portrait',
     'standard',
-    'feature',
     'wide',
+    'portrait',
+    'feature',
     'standard',
   ];
 

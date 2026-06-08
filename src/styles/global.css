@@ -95,8 +95,9 @@ img {
 .hero__content,
 .content-wrap,
 .site-footer {
-  width: min(calc(100% - 32px), var(--max-width));
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .site-header__inner {
@@ -104,7 +105,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 14px 0;
+  padding: 14px clamp(16px, 3vw, 48px);
 }
 
 .brand {
@@ -188,13 +189,15 @@ img {
   grid-template-columns: minmax(0, 1fr);
   gap: 0;
   align-items: start;
+  padding-inline: clamp(16px, 3vw, 48px);
 }
 
 .hero__copy {
   border: none;
   border-radius: 0;
-  padding: 0 0 54px;
-  max-width: 940px;
+  padding: clamp(8px, 1vw, 12px) 0 54px;
+  width: 100%;
+  max-width: none;
   background: transparent;
   box-shadow: none;
 }
@@ -293,7 +296,7 @@ img {
 .content-wrap {
   display: grid;
   gap: 18px;
-  padding: 10px 0 76px;
+  padding: 10px clamp(16px, 3vw, 48px) 76px;
 }
 
 .filters {
@@ -427,14 +430,13 @@ img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-auto-rows: 10px;
   grid-auto-flow: dense;
-  gap: 18px;
+  gap: 12px;
 }
 
 .photo-card {
   width: 100%;
   display: grid;
   grid-template-rows: 1fr;
-  gap: 0;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.055);
   border-radius: 16px;
@@ -456,16 +458,16 @@ img {
 }
 
 .photo-card--feature {
-  grid-column: span 7;
-  transform: translateY(-8px);
+  grid-column: span 6;
+  transform: translateY(-4px);
 }
 
 .photo-card--panorama {
-  grid-column: span 8;
+  grid-column: span 6;
 }
 
 .photo-card--wide {
-  grid-column: span 5;
+  grid-column: span 4;
 }
 
 .photo-card--standard {
@@ -565,7 +567,7 @@ img {
 }
 
 .photo-card--feature .photo-card__headline h3 {
-  font-size: 1.08rem;
+  font-size: 1.04rem;
 }
 
 .photo-card__headline span,
@@ -837,7 +839,7 @@ img {
 
   .gallery {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 14px;
+    gap: 10px;
   }
 
   .photo-card--feature,
@@ -854,13 +856,6 @@ img {
 }
 
 @media (max-width: 560px) {
-  .site-header__inner,
-  .hero__content,
-  .content-wrap,
-  .site-footer {
-    width: min(calc(100% - 20px), var(--max-width));
-  }
-
   .hero h1 {
     font-size: clamp(2.45rem, 13vw, 4rem);
   }
