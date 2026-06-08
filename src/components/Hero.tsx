@@ -31,9 +31,10 @@ function Hero({ totalCount }: HeroProps) {
             </a>
           </div>
 
-          <p className="hero__note">
-            {totalCount} photos, une direction visuelle simple, un rendu statique rapide.
-          </p>
+          <div className="hero__index" aria-label={`${totalCount} photos au total`}>
+            <span>Portfolio éditorial</span>
+            <span>{totalCount} photos</span>
+          </div>
         </motion.div>
       </div>
     </section>

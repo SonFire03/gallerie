@@ -38,7 +38,6 @@ function PhotoCard({ photo, onClick, index, layout, rowSpan }: PhotoCardProps) {
             <h3>{photo.title}</h3>
             <span>{photo.category}</span>
           </div>
-          <p className="photo-card__caption">{photo.description}</p>
           <div className="photo-card__meta">
             <span>{new Date(photo.date).getFullYear()}</span>
           </div>
