@@ -33,16 +33,15 @@ function PhotoCard({ photo, onClick, index, layout, rowSpan }: PhotoCardProps) {
           decoding="async"
           onLoad={() => setLoaded(true)}
         />
-      </div>
-
-      <div className="photo-card__body">
-        <div className="photo-card__headline">
-          <h3>{photo.title}</h3>
-          <span>{photo.category}</span>
-        </div>
-        <p className="photo-card__caption">{photo.description}</p>
-        <div className="photo-card__meta">
-          <span>{new Date(photo.date).getFullYear()}</span>
+        <div className="photo-card__overlay">
+          <div className="photo-card__headline">
+            <h3>{photo.title}</h3>
+            <span>{photo.category}</span>
+          </div>
+          <p className="photo-card__caption">{photo.description}</p>
+          <div className="photo-card__meta">
+            <span>{new Date(photo.date).getFullYear()}</span>
+          </div>
         </div>
       </div>
     </motion.button>

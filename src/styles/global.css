@@ -104,7 +104,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 .brand {
@@ -118,7 +118,7 @@ img {
   height: 12px;
   border-radius: 999px;
   background: radial-gradient(circle, var(--accent) 0%, var(--accent-strong) 100%);
-  box-shadow: 0 0 24px rgba(78, 232, 255, 0.9);
+  box-shadow: 0 0 20px rgba(78, 232, 255, 0.7);
 }
 
 .brand__text {
@@ -127,8 +127,8 @@ img {
 }
 
 .brand__text strong {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -136,7 +136,7 @@ img {
 .header-meta,
 .site-nav a {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.86rem;
 }
 
 .site-nav {
@@ -165,7 +165,7 @@ img {
 .hero {
   position: relative;
   overflow: clip;
-  padding: 88px 0 42px;
+  padding: 92px 0 44px;
 }
 
 .hero__ambient {
@@ -175,10 +175,10 @@ img {
   height: min(72vw, 800px);
   transform: translateX(-50%);
   background:
-    radial-gradient(circle, rgba(78, 232, 255, 0.18), transparent 55%),
-    radial-gradient(circle, rgba(0, 194, 255, 0.1), transparent 70%);
-  filter: blur(20px);
-  opacity: 0.45;
+    radial-gradient(circle, rgba(78, 232, 255, 0.14), transparent 58%),
+    radial-gradient(circle, rgba(0, 194, 255, 0.08), transparent 72%);
+  filter: blur(24px);
+  opacity: 0.35;
   pointer-events: none;
 }
 
@@ -202,8 +202,9 @@ img {
 
 .hero__copy {
   border-radius: var(--radius-lg);
-  padding: clamp(30px, 5vw, 64px);
-  max-width: 760px;
+  padding: clamp(28px, 5vw, 60px);
+  max-width: 740px;
+  background: rgba(8, 14, 24, 0.72);
 }
 
 .eyebrow {
@@ -226,7 +227,7 @@ img {
 
 .hero h1 {
   max-width: 9ch;
-  font-size: clamp(3.6rem, 9vw, 7rem);
+  font-size: clamp(3.6rem, 9vw, 7.2rem);
   font-weight: 400;
 }
 
@@ -241,22 +242,22 @@ img {
 }
 
 .hero__lead {
-  max-width: 42ch;
-  margin: 16px 0 0;
-  font-size: 0.98rem;
+  max-width: 44ch;
+  margin: 14px 0 0;
+  font-size: 0.96rem;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .hero__note {
-  margin: 18px 0 0;
+  margin: 16px 0 0;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 0.02em;
 }
 
@@ -264,7 +265,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
+  min-height: 42px;
   padding: 0 16px;
   border-radius: 999px;
   border: 1px solid transparent;
@@ -282,7 +283,7 @@ img {
   background: linear-gradient(135deg, var(--accent-strong), var(--accent));
   color: #03111b;
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(78, 232, 255, 0.18) inset;
+  box-shadow: 0 0 0 1px rgba(78, 232, 255, 0.14) inset;
 }
 
 .button--secondary {
@@ -293,17 +294,17 @@ img {
 
 .content-wrap {
   display: grid;
-  gap: 20px;
+  gap: 18px;
   padding: 6px 0 72px;
 }
 
 .filters {
   border-radius: var(--radius-lg);
-  padding: 16px 18px 14px;
+  padding: 15px 18px 14px;
   display: grid;
   gap: 12px;
-  background: rgba(8, 14, 24, 0.7);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  background: rgba(8, 14, 24, 0.64);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
 }
 
 .filters__topline {
@@ -311,13 +312,13 @@ img {
   align-items: end;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
   padding-bottom: 10px;
 }
 
 .filters h2 {
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  letter-spacing: -0.05em;
 }
 
 .filters__count {
@@ -328,7 +329,7 @@ img {
 .filters__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(180px, 0.5fr);
-  gap: 16px;
+  gap: 14px;
 }
 
 .field {
@@ -347,8 +348,8 @@ img {
   width: 100%;
   padding: 0 16px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(4, 10, 18, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 10, 18, 0.5);
   color: var(--text);
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
@@ -372,7 +373,7 @@ img {
 
 .chips--portfolio {
   padding-top: 4px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.045);
 }
 
 .chip {
@@ -394,8 +395,8 @@ img {
   padding-inline: 13px;
   min-width: auto;
   min-height: 36px;
-  background: rgba(255, 255, 255, 0.015);
-  border-color: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.012);
+  border-color: rgba(255, 255, 255, 0.035);
   position: relative;
 }
 
@@ -424,8 +425,8 @@ img {
 }
 
 .chip--active {
-  background: rgba(78, 232, 255, 0.07);
-  border-color: rgba(78, 232, 255, 0.22);
+  background: rgba(78, 232, 255, 0.06);
+  border-color: rgba(78, 232, 255, 0.2);
   color: var(--text);
 }
 
@@ -434,19 +435,19 @@ img {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-auto-rows: 10px;
   grid-auto-flow: dense;
-  gap: 18px;
+  gap: 16px;
 }
 
 .photo-card {
   width: 100%;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr;
   gap: 0;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.045);
+  border-radius: 20px;
   overflow: hidden;
-  background: rgba(8, 14, 24, 0.42);
+  background: rgba(8, 14, 24, 0.28);
   text-align: left;
   color: inherit;
   break-inside: avoid;
@@ -458,8 +459,8 @@ img {
 
 .photo-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(78, 232, 255, 0.16);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+  border-color: rgba(78, 232, 255, 0.15);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .photo-card__media::before {
@@ -489,7 +490,7 @@ img {
 
 .photo-card--feature {
   grid-column: span 7;
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 
 .photo-card--panorama {
@@ -540,8 +541,8 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.55));
-  opacity: 0.8;
+  background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.7));
+  opacity: 0.9;
   pointer-events: none;
 }
 
@@ -560,25 +561,7 @@ img {
 }
 
 .photo-card__body {
-  display: grid;
-  gap: 8px;
-  padding: 13px 15px 15px;
-}
-
-.photo-card--feature .photo-card__body {
-  padding: 15px 17px 17px;
-}
-
-.photo-card--feature .photo-card__headline h3 {
-  font-size: 1.32rem;
-}
-
-.photo-card--panorama .photo-card__body {
-  padding: 22px;
-}
-
-.photo-card--panorama .photo-card__headline h3 {
-  font-size: 1.18rem;
+  display: contents;
 }
 
 .photo-card__headline {
@@ -590,31 +573,49 @@ img {
 
 .photo-card__headline h3 {
   margin: 0;
-  font-size: 0.96rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.photo-card__overlay {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  padding: 16px 16px 14px;
+  background: linear-gradient(180deg, transparent, rgba(3, 7, 12, 0.82));
+  color: var(--text);
+  opacity: 0.94;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.photo-card:hover .photo-card__overlay,
+.photo-card:focus-visible .photo-card__overlay {
+  opacity: 1;
 }
 
 .photo-card--feature .photo-card__headline h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .photo-card__headline span,
-.photo-card__meta {
-  color: var(--muted);
-  font-size: 0.76rem;
+.photo-card__meta,
+.photo-card__caption {
+  color: rgba(236, 245, 255, 0.8);
+  font-size: 0.78rem;
 }
 
 .photo-card__caption {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.55;
+  max-width: 34ch;
+  line-height: 1.45;
 }
 
 .photo-card__meta {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: flex-end;
 }
 
 .photo-card--skeleton {
@@ -744,7 +745,7 @@ img {
 }
 
 .lightbox__details h3 {
-  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
 }
 
 .lightbox__meta {
@@ -781,6 +782,7 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  background: rgba(8, 14, 24, 0.58);
 }
 
 .site-footer p {

@@ -18,7 +18,7 @@ function Header({ totalCount, visibleCount }: HeaderProps) {
           <span className="brand__mark" aria-hidden="true" />
           <span className="brand__text">
             <strong>SonFire03</strong>
-            <span>Gallerie</span>
+            <span>Portfolio</span>
           </span>
         </a>
 
